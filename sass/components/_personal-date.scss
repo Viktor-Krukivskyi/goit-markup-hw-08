@@ -1,0 +1,66 @@
+.text-contact {
+    font-size: 20px;
+    line-height: 23px;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: var(--color-primary);
+}
+
+.form-label {
+    display: block;
+    font-size: 12px;
+    line-height: 1.16;
+    margin-bottom: 4px;
+    margin-top: 10px;
+}
+
+
+.form-comment {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    height: 120px;
+    resize: none;
+    outline: none;
+}
+
+.form-comment:hover {
+    border-color: var(--color-inverted);
+}
+
+.form-comment:focus {
+    border-color: var(--color-inverted);
+}
+
+.form-control {
+    position: relative;
+}
+
+.form-input {
+    width: 100%;
+    padding: 11px 11px 11px 38px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    outline: none;
+}
+
+.form-input:hover {
+    border-color: var(--color-inverted);
+}
+
+.form-input:focus {
+    border-color: var(--color-inverted);
+}
+
+.form-icon {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    fill: currentColor;
+}
+
+.form-control:focus-within .form-icon {
+    fill: var(--color-inverted);
+}

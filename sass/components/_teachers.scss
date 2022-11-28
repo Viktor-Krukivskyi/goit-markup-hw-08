@@ -1,0 +1,123 @@
+.soc-list {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 16px;
+}
+
+ul {
+    list-style: none;
+}
+
+
+.icon-link {
+    width: 44px;
+    height: 44px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    fill: var(--color-white);
+    transition: fill 250ms, background 250ms var(--color-time);
+}
+
+.icon-team {
+    fill: var(--color-icon);
+    transition: fill 250ms, background 250ms var(--color-time);
+}
+
+.icon-team:focus {
+    fill: var(--color-white);
+    transition: fill 250ms, background 250ms var(--color-time);
+}
+.icon-team:hover {
+    fill: var(--color-white);
+    transition: fill 250ms, background 250ms var(--color-time);
+}
+
+.icon-link:hover {
+    background-color: var(--color-inverted);
+    transition: fill 250ms, background 250ms var(--color-time);
+}
+
+.icon-link:hover .icon-team {
+    fill: var(--color-white);
+    transition: fill 250ms, background 250ms var(--color-time);
+}
+.icon-link:focus .icon-team {
+    fill: var(--color-white);
+    transition: fill 250ms, background 250ms var(--color-time);
+}
+.icon-link:focus {
+    background-color: var(--color-inverted);
+    transition: fill 250ms, background 250ms var(--color-time);
+}
+
+
+.section-title-team {
+    font-size: 16px;
+    line-height: 1.14;
+    margin-bottom: 10px;
+}
+
+.section-subtitle-team {
+    color: var(--color-secondary);
+    font-size: 16px;
+    line-height: 1.71;
+}
+
+.main-title-team {
+    font-family: 'Roboto';
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.16;
+    margin-bottom: 10px;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.section-team {
+    width: 100%;
+    background-color: var(--color-background-box2);
+}
+
+.team-box {
+    width: 270px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+        0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
+    background-color: var(--color-white);
+    text-align: center;
+
+    @media  (min-width:768px) {
+            width: 354px;
+        }
+    
+        @media  (min-width:1200px) {
+            width: 270px;
+        }
+}
+
+.img {
+    background-color: var(--color-white);
+    display: block;
+}
+
+.list-team {
+    display: flex;
+        gap: 30px;
+    
+        @media  (max-width:767px) {
+            flex-direction: column;
+        }
+    
+        @media  (min-width:768px) {
+            flex-wrap: wrap;
+        }
+    
+        @media  (min-width:1200px) {
+            flex-direction: row;
+        }
+}

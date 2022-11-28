@@ -1,0 +1,20 @@
+.modal-close-button {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+     width: 30px;
+    height: 30px;
+    background-color: var(--color-white);
+    border-radius: 50%;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+.icon-close {
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+.modal-close-button:hover {
+    fill: var(--color-inverted);
+    transition: color 250ms var(--color-time);
+}

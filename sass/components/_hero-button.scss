@@ -1,0 +1,24 @@
+.hero__button-main:hover {
+    background: var(--color-inverted);
+    color: var(--color-white);
+}
+
+.hero__button-main:focus {
+    color: var(--color-white);
+}
+.hero__button-main {
+    background-color: var(--color-inverted);
+    color: var(--color-white);
+    font-family: 'Roboto';
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.87;
+    letter-spacing: 0.06em;
+    margin-top: 40px;
+    border-radius: 4px;
+    min-width: 216px;
+    padding: 10px 32px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 250ms var(--color-time);
+}
