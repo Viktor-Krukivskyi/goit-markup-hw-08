@@ -83,15 +83,11 @@ section {
   background-color: rgba(0, 0, 0, 0.2);
   opacity: 1;
   transition: opacity 250ms var(--color-time), visibility 250ms var(--color-time);
+  overflow: scroll;
 }
 
 .backdrop.is-hidden .modal {
   transform: translate(-50%, -50%) scale(1.5);
-}
-
-body.modal-open {
-  height: 100%;
-  overflow-y: hidden;
 }
 
 .modal {
@@ -100,6 +96,7 @@ body.modal-open {
   border-radius: 4px;
   padding: 40px;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  overflow: scroll;
 }
 @media (max-width: 479px) {
   .modal {
@@ -179,6 +176,7 @@ body.modal-open {
   font-family: "Raleway";
   font-style: normal;
   font-weight: 700;
+  padding: 16px;
   font-size: 24px;
   line-height: 1.19;
   text-decoration: none;
@@ -674,23 +672,12 @@ ul {
 }
 
 .team-box {
-  width: 270px;
   padding-top: 30px;
   padding-bottom: 30px;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
   background-color: var(--color-white);
   text-align: center;
-}
-@media (min-width: 768px) {
-  .team-box {
-    width: 354px;
-  }
-}
-@media (min-width: 1200px) {
-  .team-box {
-    width: 270px;
-  }
 }
 
 .list-team {
@@ -710,6 +697,15 @@ ul {
 @media (min-width: 1200px) {
   .list-team {
     flex-direction: row;
+  }
+}
+
+.img-teachers {
+  flex-basis: calc((100% - 30px) / 2);
+}
+@media (min-width: 1200px) {
+  .img-teachers {
+    flex-basis: calc((100% - 90px) / 4);
   }
 }
 
@@ -758,11 +754,6 @@ ul {
   border-radius: 4px;
   transition: fill 250ms, background 250ms var(--color-time);
 }
-@media (min-width: 1200px) {
-  .clients-link {
-    width: 170px;
-  }
-}
 
 .clients-link:focus {
   background-color: var(--color-inverted);
@@ -781,6 +772,20 @@ ul {
 .clients-link:focus .clients-team {
   fill: var(--color-white);
   transition: fill 250ms, background 250ms var(--color-time);
+}
+
+.clients-list {
+  flex-basis: calc((100% - 30px) / 2);
+}
+@media (min-width: 768px) {
+  .clients-list {
+    flex-basis: calc((100% - 60px) / 3);
+  }
+}
+@media (min-width: 1200px) {
+  .clients-list {
+    flex-basis: calc((100% - 150px) / 6);
+  }
 }
 
 .address {

@@ -82,7 +82,6 @@ ul {
 }
 
 .team-box {
-    width: 270px;
     padding-top: 30px;
     padding-bottom: 30px;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
@@ -90,21 +89,13 @@ ul {
     border-radius: 0px 0px 4px 4px;
     background-color: var(--color-white);
     text-align: center;
-
-    @media  (min-width:768px) {
-            width: 354px;
-        }
-    
-        @media  (min-width:1200px) {
-            width: 270px;
-        }
 }
 
 
 
 .list-team {
     display: flex;
-        gap: 30px;
+    gap: 30px;
     
         @media  (max-width:767px) {
             flex-direction: column;
@@ -117,4 +108,10 @@ ul {
         @media  (min-width:1200px) {
             flex-direction: row;
         }
+}
+.img-teachers {
+    flex-basis: calc((100% - 30px) / 2);
+    @media (min-width:1200px) {
+        flex-basis: calc((100% - 90px) / 4);
+    }
 }
