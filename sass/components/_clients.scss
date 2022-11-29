@@ -7,10 +7,10 @@
 
 .clients-name {
     display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 30px;
-    margin-top: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    
 
     @media  (min-width: 1200px) {
             display: flex;
@@ -33,18 +33,17 @@
     transition: fill 250ms, background 250ms var(--color-time);
 }
 .clients-link {
-    width: 210px;
+    
     height: 92px;
     display: flex;
     justify-content: center;
     align-items: center;
     border: 1px solid #afb1b8;
     border-radius: 4px;
-    align-items: center;
     transition: fill 250ms, background 250ms var(--color-time);
 
     
-   @media screen and (min-width:1200px) {
+   @media  (min-width:1200px) {
             width: 170px;
         }
 }

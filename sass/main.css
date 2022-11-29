@@ -89,6 +89,11 @@ section {
   transform: translate(-50%, -50%) scale(1.5);
 }
 
+body.modal-open {
+  height: 100%;
+  overflow-y: hidden;
+}
+
 .modal {
   position: relative;
   background-color: var(--color-white);
@@ -104,11 +109,11 @@ section {
 @media (min-width: 480px) {
   .modal {
     position: absolute;
-    top: 50%;
+    top: 30px;
     left: 50%;
     height: 609px;
     width: 450px;
-    transform: translate(-50%, -50%) scale(1);
+    transform: translate(-50%) scale(1);
     transition: transform 250ms var(--color-time);
   }
 }
@@ -362,20 +367,21 @@ section {
 @media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
   .hero {
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../photo/bigfon@2x.jpg);
+    max-width: 767px;
   }
 }
-@media screen and (min-width: 768px) {
+@media (min-width: 768px) {
   .hero {
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../photo/bigfon.jpg);
-    max-width: 768px;
+    max-width: 1199px;
   }
 }
-@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
+@media (min-width: 768px) and (min-device-pixel-ratio: 2), (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 768px) and (min-resolution: 192dpi), (min-width: 768px) and (min-resolution: 2dppx) {
   .hero {
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../photo/bigfon@2x.jpg);
   }
 }
-@media screen and (min-width: 1200px) {
+@media (min-width: 1200px) {
   .hero {
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../photo/bigfon.jpg);
     max-width: 1600px;
@@ -384,7 +390,7 @@ section {
     padding-bottom: 200px;
   }
 }
-@media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
+@media (min-width: 1200px) and (min-device-pixel-ratio: 2), (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 1200px) and (min-resolution: 192dpi), (min-width: 1200px) and (min-resolution: 2dppx) {
   .hero {
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)) url(../photo/bigfon@2x.jpg);
   }
@@ -397,7 +403,6 @@ section {
   font-size: 26px;
   line-height: 1.61;
   margin: 0 auto;
-  width: 360px;
   text-transform: uppercase;
 }
 @media (min-width: 768px) {
@@ -688,11 +693,6 @@ ul {
   }
 }
 
-.img {
-  background-color: var(--color-white);
-  display: block;
-}
-
 .list-team {
   display: flex;
   gap: 30px;
@@ -725,7 +725,6 @@ ul {
   flex-wrap: wrap;
   justify-content: center;
   gap: 30px;
-  margin-top: 30px;
 }
 @media (min-width: 1200px) {
   .clients-name {
@@ -751,17 +750,15 @@ ul {
 }
 
 .clients-link {
-  width: 210px;
   height: 92px;
   display: flex;
   justify-content: center;
   align-items: center;
   border: 1px solid #afb1b8;
   border-radius: 4px;
-  align-items: center;
   transition: fill 250ms, background 250ms var(--color-time);
 }
-@media screen and (min-width: 1200px) {
+@media (min-width: 1200px) {
   .clients-link {
     width: 170px;
   }
@@ -993,6 +990,8 @@ ul {
 
 .sending-title {
   display: flex;
+  align-items: center;
+  justify-content: center;
   font-size: 14px;
   text-transform: uppercase;
   line-height: 16px;
@@ -1042,7 +1041,7 @@ ul {
 
 .input-form {
   display: block;
-  width: 358px;
+  width: 285px;
   padding-top: 15px;
   padding-bottom: 15px;
   padding-left: 16px;
@@ -1406,6 +1405,7 @@ ul {
 
 .mobile-menu__nav {
   margin-bottom: auto;
+  padding: 40px;
 }
 
 .mobile-menu__menu {
@@ -1416,14 +1416,13 @@ ul {
   line-height: 1.17;
   display: block;
   margin-top: 32px;
-  margin-left: 40px;
   transition: color 250ms var(--color-time);
 }
 
 .mobile-menu__contact {
   display: flex;
   flex-direction: column;
-  margin-bottom: 64px;
+  padding: 40px;
 }
 
 .mobile-menu__tel {
@@ -1433,7 +1432,6 @@ ul {
   line-height: 1.17;
   letter-spacing: 0.02em;
   text-decoration: none;
-  margin-left: 40px;
   margin-bottom: 32px;
   color: var(--color-inverted);
 }
@@ -1445,14 +1443,13 @@ ul {
   line-height: 1.16;
   letter-spacing: 0.02em;
   text-decoration: none;
-  margin-left: 40px;
   color: var(--color-secondary);
 }
 
 .mobile-menu__networks {
   width: 100%;
   display: flex;
-  margin-left: 40px;
+  padding: 40px;
   margin-bottom: 48px;
   gap: 20px;
 }
